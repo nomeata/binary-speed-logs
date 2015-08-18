@@ -1,0 +1,331 @@
+
+Cloning
+
+git clone --recursive --reference binary-master git://github.com/kolmodin/binary.git binary-tmp-REV
+Cloning into 'binary-tmp-REV'...
+git checkout 76d2475f47dbbecc6aced2a4799db5ade11c392b
+Note: checking out '76d2475f47dbbecc6aced2a4799db5ade11c392b'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 76d2475... Silence some warnings in benchmarks/Get.hs
+
+Identifying
+
+git log -n 1
+commit 76d2475f47dbbecc6aced2a4799db5ade11c392b
+Author: Lennart Kolmodin <kolmodin@google.com>
+Date:   Sun Aug 9 17:49:26 2015 +0200
+
+    Silence some warnings in benchmarks/Get.hs
+
+Code stats
+
+ohcount src/
+Examining 14 file(s)
+
+                          Ohloh Line Count Summary                          
+
+Language          Files       Code    Comment  Comment %      Blank      Total
+----------------  -----  ---------  ---------  ---------  ---------  ---------
+haskell               9       1330       1030      43.6%        421       2781
+----------------  -----  ---------  ---------  ---------  ---------  ---------
+Total                 9       1330       1030      43.6%        421       2781
+
+Building
+
+cabal configure --enable-benchmarks
+Warning: The package list for 'hackage.haskell.org' is 78 days old.
+Run 'cabal update' to get the latest list of available packages.
+Resolving dependencies...
+Configuring binary-0.7.6.1...
+cabal build
+Building binary-0.7.6.1...
+Preprocessing library binary-0.7.6.1...
+[1 of 9] Compiling Data.Binary.Builder.Base ( src/Data/Binary/Builder/Base.hs, dist/build/Data/Binary/Builder/Base.o )
+
+src/Data/Binary/Builder/Base.hs:193:37: Warning:
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[2 of 9] Compiling Data.Binary.Builder.Internal ( src/Data/Binary/Builder/Internal.hs, dist/build/Data/Binary/Builder/Internal.o )
+[3 of 9] Compiling Data.Binary.Get.Internal ( src/Data/Binary/Get/Internal.hs, dist/build/Data/Binary/Get/Internal.o )
+
+src/Data/Binary/Get/Internal.hs:417:21: Warning:
+    In the use of `B.inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[4 of 9] Compiling Data.Binary.Builder ( src/Data/Binary/Builder.hs, dist/build/Data/Binary/Builder.o )
+[5 of 9] Compiling Data.Binary.Get  ( src/Data/Binary/Get.hs, dist/build/Data/Binary/Get.o )
+[6 of 9] Compiling Data.Binary.Put  ( src/Data/Binary/Put.hs, dist/build/Data/Binary/Put.o )
+[7 of 9] Compiling Data.Binary.Class ( src/Data/Binary/Class.hs, dist/build/Data/Binary/Class.o )
+[8 of 9] Compiling Data.Binary.Generic ( src/Data/Binary/Generic.hs, dist/build/Data/Binary/Generic.o )
+[9 of 9] Compiling Data.Binary      ( src/Data/Binary.hs, dist/build/Data/Binary.o )
+In-place registering binary-0.7.6.1...
+Preprocessing benchmark 'builder' for binary-0.7.6.1...
+[1 of 3] Compiling Data.Binary.Builder.Base ( src/Data/Binary/Builder/Base.hs, dist/build/builder/builder-tmp/Data/Binary/Builder/Base.o )
+
+src/Data/Binary/Builder/Base.hs:193:37: Warning:
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[2 of 3] Compiling Data.Binary.Builder ( src/Data/Binary/Builder.hs, dist/build/builder/builder-tmp/Data/Binary/Builder.o )
+[3 of 3] Compiling Main             ( benchmarks/Builder.hs, dist/build/builder/builder-tmp/Main.o )
+Linking dist/build/builder/builder ...
+Preprocessing benchmark 'get' for binary-0.7.6.1...
+[1 of 3] Compiling Data.Binary.Get.Internal ( src/Data/Binary/Get/Internal.hs, dist/build/get/get-tmp/Data/Binary/Get/Internal.o )
+
+src/Data/Binary/Get/Internal.hs:417:21: Warning:
+    In the use of `B.inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[2 of 3] Compiling Data.Binary.Get  ( src/Data/Binary/Get.hs, dist/build/get/get-tmp/Data/Binary/Get.o )
+[3 of 3] Compiling Main             ( benchmarks/Get.hs, dist/build/get/get-tmp/Main.o )
+Linking dist/build/get/get ...
+Preprocessing benchmark 'bench' for binary-0.7.6.1...
+[1 of 9] Compiling Data.Binary.Builder.Base ( src/Data/Binary/Builder/Base.hs, dist/build/bench/bench-tmp/Data/Binary/Builder/Base.o )
+
+src/Data/Binary/Builder/Base.hs:193:37: Warning:
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[2 of 9] Compiling Data.Binary.Builder ( src/Data/Binary/Builder.hs, dist/build/bench/bench-tmp/Data/Binary/Builder.o )
+[3 of 9] Compiling Data.Binary.Get.Internal ( src/Data/Binary/Get/Internal.hs, dist/build/bench/bench-tmp/Data/Binary/Get/Internal.o )
+
+src/Data/Binary/Get/Internal.hs:417:21: Warning:
+    In the use of `B.inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[4 of 9] Compiling Data.Binary.Get  ( src/Data/Binary/Get.hs, dist/build/bench/bench-tmp/Data/Binary/Get.o )
+[5 of 9] Compiling Data.Binary.Put  ( src/Data/Binary/Put.hs, dist/build/bench/bench-tmp/Data/Binary/Put.o )
+[6 of 9] Compiling Data.Binary.Class ( src/Data/Binary/Class.hs, dist/build/bench/bench-tmp/Data/Binary/Class.o )
+[7 of 9] Compiling Data.Binary      ( src/Data/Binary.hs, dist/build/bench/bench-tmp/Data/Binary.o )
+[8 of 9] Compiling MemBench         ( benchmarks/MemBench.hs, dist/build/bench/bench-tmp/MemBench.o )
+[9 of 9] Compiling Main             ( benchmarks/Benchmark.hs, dist/build/bench/bench-tmp/Main.o )
+Linking dist/build/bench/bench ...
+
+Benchmarking
+
+cabal bench
+Building binary-0.7.6.1...
+Preprocessing library binary-0.7.6.1...
+In-place registering binary-0.7.6.1...
+Preprocessing benchmark 'builder' for binary-0.7.6.1...
+Preprocessing benchmark 'get' for binary-0.7.6.1...
+Preprocessing benchmark 'bench' for binary-0.7.6.1...
+Linking dist/build/bench/bench ...
+Running 3 benchmarks...
+Benchmark builder: RUNNING...
+benchmarking [Word8]
+time                 34.77 μs   (34.76 μs .. 34.77 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 34.78 μs   (34.77 μs .. 34.79 μs)
+std dev              28.41 ns   (21.97 ns .. 37.59 ns)
+
+benchmarking bounds/[Word8]
+time                 42.69 μs   (42.68 μs .. 42.70 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 42.69 μs   (42.68 μs .. 42.71 μs)
+std dev              35.29 ns   (15.20 ns .. 61.20 ns)
+
+benchmarking small ByteString
+time                 331.7 ns   (331.4 ns .. 331.8 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 330.9 ns   (330.6 ns .. 331.2 ns)
+std dev              1.105 ns   (965.7 ps .. 1.284 ns)
+
+benchmarking large ByteString
+time                 335.0 ns   (334.9 ns .. 335.1 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 335.0 ns   (334.9 ns .. 335.1 ns)
+std dev              448.7 ps   (359.7 ps .. 575.0 ps)
+
+benchmarking length-prefixed ByteString
+time                 7.581 μs   (7.580 μs .. 7.582 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 7.582 μs   (7.582 μs .. 7.584 μs)
+std dev              3.945 ns   (1.960 ns .. 7.604 ns)
+
+benchmarking Host endian/1MB of Word8 in chunks of 16
+time                 369.6 μs   (369.6 μs .. 369.7 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 368.9 μs   (368.5 μs .. 369.1 μs)
+std dev              977.1 ns   (647.3 ns .. 1.398 μs)
+
+benchmarking Host endian/1MB of Word16 in chunks of 16
+time                 224.9 μs   (224.7 μs .. 225.1 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 224.5 μs   (224.3 μs .. 224.6 μs)
+std dev              468.1 ns   (366.0 ns .. 617.0 ns)
+
+benchmarking Host endian/1MB of Word32 in chunks of 16
+time                 154.5 μs   (154.3 μs .. 154.7 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 154.5 μs   (154.5 μs .. 154.6 μs)
+std dev              261.3 ns   (200.9 ns .. 334.2 ns)
+
+benchmarking Host endian/1MB of Word64 in chunks of 16
+time                 98.22 μs   (97.98 μs .. 98.38 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 97.63 μs   (97.50 μs .. 97.82 μs)
+std dev              504.8 ns   (407.0 ns .. 594.7 ns)
+
+Benchmark builder: FINISH
+Benchmark get: RUNNING...
+benchmarking brackets 100kb one chunk input
+time                 6.032 ms   (6.030 ms .. 6.033 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 6.041 ms   (6.038 ms .. 6.046 ms)
+std dev              11.10 μs   (7.551 μs .. 15.85 μs)
+
+benchmarking brackets 100kb in 100 byte chunks
+time                 6.408 ms   (6.404 ms .. 6.411 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 6.401 ms   (6.397 ms .. 6.405 ms)
+std dev              11.35 μs   (8.739 μs .. 15.31 μs)
+
+benchmarking Attoparsec lazy-bs brackets 100kb one chunk
+time                 2.714 ms   (2.713 ms .. 2.715 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 2.715 ms   (2.713 ms .. 2.716 ms)
+std dev              4.905 μs   (3.806 μs .. 6.631 μs)
+
+benchmarking Attoparsec lazy-bs brackets 100kb in 100 byte chunks
+time                 2.774 ms   (2.772 ms .. 2.776 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 2.776 ms   (2.774 ms .. 2.778 ms)
+std dev              7.373 μs   (5.359 μs .. 10.50 μs)
+
+benchmarking Attoparsec strict-bs brackets 100kb
+time                 2.700 ms   (2.699 ms .. 2.701 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 2.699 ms   (2.698 ms .. 2.701 ms)
+std dev              3.672 μs   (3.008 μs .. 4.848 μs)
+
+benchmarking Cereal strict-bs brackets 100kb
+time                 7.259 ms   (7.254 ms .. 7.264 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 7.258 ms   (7.254 ms .. 7.262 ms)
+std dev              10.92 μs   (7.913 μs .. 16.40 μs)
+
+benchmarking Binary getStruct4 1MB struct of 4 word8
+time                 23.10 ms   (22.57 ms .. 23.77 ms)
+                     0.997 R²   (0.995 R² .. 0.999 R²)
+mean                 23.41 ms   (23.12 ms .. 23.75 ms)
+std dev              690.8 μs   (503.2 μs .. 1.010 ms)
+
+benchmarking Cereal getStruct4 1MB struct of 4 word8
+time                 36.43 ms   (35.55 ms .. 37.62 ms)
+                     0.997 R²   (0.994 R² .. 0.999 R²)
+mean                 36.55 ms   (35.85 ms .. 37.23 ms)
+std dev              1.468 ms   (1.030 ms .. 2.210 ms)
+variance introduced by outliers: 12% (moderately inflated)
+
+benchmarking Attoparsec getStruct4 1MB struct of 4 word8
+time                 26.35 ms   (25.91 ms .. 26.71 ms)
+                     0.999 R²   (0.998 R² .. 1.000 R²)
+mean                 26.48 ms   (26.14 ms .. 27.40 ms)
+std dev              1.126 ms   (434.7 μs .. 2.051 ms)
+variance introduced by outliers: 11% (moderately inflated)
+
+benchmarking Binary getWord8 1MB chunk size 1 byte
+time                 1.952 ms   (1.952 ms .. 1.952 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 1.952 ms   (1.952 ms .. 1.953 ms)
+std dev              930.8 ns   (703.3 ns .. 1.319 μs)
+
+benchmarking Cereal getWord8 1MB chunk size 1 byte
+time                 14.15 ms   (14.15 ms .. 14.15 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 14.15 ms   (14.15 ms .. 14.15 ms)
+std dev              4.301 μs   (3.352 μs .. 5.546 μs)
+
+benchmarking Attoparsec getWord8 1MB chunk size 1 byte
+time                 2.180 ms   (2.180 ms .. 2.180 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 2.180 ms   (2.180 ms .. 2.180 ms)
+std dev              665.0 ns   (429.2 ns .. 1.112 μs)
+
+benchmarking getWord8 1MB chunk size 2 bytes
+time                 2.013 ms   (2.011 ms .. 2.015 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 2.012 ms   (2.011 ms .. 2.012 ms)
+std dev              2.283 μs   (1.772 μs .. 3.288 μs)
+
+benchmarking getWord8 1MB chunk size 4 bytes
+time                 5.965 ms   (5.962 ms .. 5.968 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 5.967 ms   (5.965 ms .. 5.969 ms)
+std dev              5.905 μs   (4.258 μs .. 9.016 μs)
+
+benchmarking getWord8 1MB chunk size 8 bytes
+time                 7.635 ms   (7.624 ms .. 7.645 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 7.640 ms   (7.636 ms .. 7.645 ms)
+std dev              13.79 μs   (12.09 μs .. 16.18 μs)
+
+benchmarking getWord8 1MB chunk size 16 bytes
+time                 13.36 ms   (13.36 ms .. 13.37 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 13.38 ms   (13.37 ms .. 13.40 ms)
+std dev              30.08 μs   (10.67 μs .. 58.81 μs)
+
+benchmarking getWord8 1MB chunk size 2 bytes Applicative
+time                 1.017 ms   (1.016 ms .. 1.017 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 1.016 ms   (1.016 ms .. 1.017 ms)
+std dev              1.307 μs   (1.090 μs .. 1.602 μs)
+
+benchmarking getWord8 1MB chunk size 4 bytes Applicative
+time                 604.7 μs   (604.4 μs .. 605.1 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 604.5 μs   (604.2 μs .. 604.8 μs)
+std dev              1.108 μs   (903.9 ns .. 1.319 μs)
+
+benchmarking getWord8 1MB chunk size 8 bytes Applicative
+time                 503.9 μs   (503.8 μs .. 504.1 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 503.9 μs   (503.9 μs .. 504.1 μs)
+std dev              354.8 ns   (289.6 ns .. 479.5 ns)
+
+benchmarking getWord8 1MB chunk size 16 bytes Applicative
+time                 554.2 μs   (554.1 μs .. 554.2 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 554.3 μs   (554.3 μs .. 554.5 μs)
+std dev              311.7 ns   (193.0 ns .. 540.8 ns)
+
+Benchmark get: FINISH
+Benchmark bench: RUNNING...
+1000MB of setup         in 0.129s, at: 7723.7MB/s
+
+C memory throughput benchmarks:
+1000MB of bytes written in 0.298s, at: 3355.3MB/s
+1000MB of bytes read    in 0.413s, at: 2423.5MB/s
+1000MB of words written in 0.114s, at: 8799.4MB/s
+1000MB of words read    in 0.068s, at: 14704.6MB/s
+
+Haskell memory throughput benchmarks:
+1000MB of bytes written in 0.809s, at: 1235.5MB/s
+1000MB of bytes read    in 0.820s, at: 1220.0MB/s
+1000MB of words written in 0.113s, at: 8838.5MB/s
+1000MB of words read    in 0.107s, at: 9339.9MB/s
+
+Binary (de)serialisation benchmarks:
+100MB of Word8  in chunks of 16 (  Host endian):  261.7 MB/s write,   87.5 MB/s read,   0.3 get/put-ratio
+100MB of Word16 in chunks of 16 (  Host endian):  471.2 MB/s write,  153.5 MB/s read,   0.3 get/put-ratio
+100MB of Word32 in chunks of 16 (  Host endian):  857.3 MB/s write,  328.1 MB/s read,   0.4 get/put-ratio
+100MB of Word64 in chunks of 16 (  Host endian): 1424.3 MB/s write,  840.2 MB/s read,   0.6 get/put-ratio
+Benchmark bench: FINISH
+
+Cleaning up
+
+cd ..
+rm -rf binary-tmp-REV
+mv 76d2475f47dbbecc6aced2a4799db5ade11c392b.log.tmp 76d2475f47dbbecc6aced2a4799db5ade11c392b.log
