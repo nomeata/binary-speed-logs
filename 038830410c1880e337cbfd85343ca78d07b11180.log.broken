@@ -1,0 +1,58 @@
+
+Cloning
+
+git clone --recursive --reference binary-master git://github.com/kolmodin/binary.git binary-tmp-REV
+Cloning into 'binary-tmp-REV'...
+git checkout 038830410c1880e337cbfd85343ca78d07b11180
+Note: checking out '038830410c1880e337cbfd85343ca78d07b11180'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 0388304... benchmark builder: Specify Int as we otherwise default to Integer.
+
+Identifying
+
+git log -n 1
+commit 038830410c1880e337cbfd85343ca78d07b11180
+Author: Lennart Kolmodin <kolmodin@google.com>
+Date:   Fri Aug 14 22:31:12 2015 +0200
+
+    benchmark builder: Specify Int as we otherwise default to Integer.
+    
+    The benchmark executes 25% faster, time which could not be attribute to
+    the speed of binary itself.
+
+Code stats
+
+ohcount src/
+Examining 14 file(s)
+
+                          Ohloh Line Count Summary                          
+
+Language          Files       Code    Comment  Comment %      Blank      Total
+----------------  -----  ---------  ---------  ---------  ---------  ---------
+haskell               9       1330       1030      43.6%        421       2781
+----------------  -----  ---------  ---------  ---------  ---------  ---------
+Total                 9       1330       1030      43.6%        421       2781
+
+Building
+
+cabal configure --enable-benchmarks
+Warning: The package list for 'hackage.haskell.org' is 78 days old.
+Run 'cabal update' to get the latest list of available packages.
+Resolving dependencies...
+Configuring binary-0.7.6.1...
+cabal: At least the following dependencies are missing:
+Cabal ==1.22.*, tar -any
+
+Failure...
+
+mv 038830410c1880e337cbfd85343ca78d07b11180.log.tmp 038830410c1880e337cbfd85343ca78d07b11180.log.broken
+rm -rf binary-tmp-REV
