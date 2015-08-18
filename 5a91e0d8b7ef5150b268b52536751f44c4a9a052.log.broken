@@ -1,0 +1,55 @@
+
+Cloning
+
+git clone --recursive --reference binary-master git://github.com/kolmodin/binary.git binary-tmp-REV
+Cloning into 'binary-tmp-REV'...
+git checkout 5a91e0d8b7ef5150b268b52536751f44c4a9a052
+Note: checking out '5a91e0d8b7ef5150b268b52536751f44c4a9a052'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 5a91e0d... Conditionally include <$> for older GHC versions.
+
+Identifying
+
+git log -n 1
+commit 5a91e0d8b7ef5150b268b52536751f44c4a9a052
+Author: Lennart Kolmodin <kolmodin@google.com>
+Date:   Fri Aug 14 12:56:59 2015 +0200
+
+    Conditionally include <$> for older GHC versions.
+
+Code stats
+
+ohcount src/
+Examining 14 file(s)
+
+                          Ohloh Line Count Summary                          
+
+Language          Files       Code    Comment  Comment %      Blank      Total
+----------------  -----  ---------  ---------  ---------  ---------  ---------
+haskell               9       1330       1030      43.6%        421       2781
+----------------  -----  ---------  ---------  ---------  ---------  ---------
+Total                 9       1330       1030      43.6%        421       2781
+
+Building
+
+cabal configure --enable-benchmarks
+Warning: The package list for 'hackage.haskell.org' is 78 days old.
+Run 'cabal update' to get the latest list of available packages.
+Resolving dependencies...
+Configuring binary-0.7.6.1...
+cabal: At least the following dependencies are missing:
+Cabal ==1.22.*, tar -any
+
+Failure...
+
+mv 5a91e0d8b7ef5150b268b52536751f44c4a9a052.log.tmp 5a91e0d8b7ef5150b268b52536751f44c4a9a052.log.broken
+rm -rf binary-tmp-REV
