@@ -1,0 +1,135 @@
+
+Cloning
+
+git clone --recursive --reference binary-master git://github.com/kolmodin/binary.git binary-tmp-REV
+Cloning into 'binary-tmp-REV'...
+git checkout 160246b8967de544d39d6218ffe41f7f4d21d28a
+Note: checking out '160246b8967de544d39d6218ffe41f7f4d21d28a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 160246b... Add new deps to .travis.yml file.
+
+Identifying
+
+git log -n 1
+commit 160246b8967de544d39d6218ffe41f7f4d21d28a
+Author: Lennart Kolmodin <kolmodin@google.com>
+Date:   Thu Aug 13 22:39:01 2015 +0200
+
+    Add new deps to .travis.yml file.
+    
+    Due to the dependency cycle we need to manually preinstall all deps
+    before we attempt to configure/build binary.
+
+Code stats
+
+ohcount src/
+Examining 14 file(s)
+
+                          Ohloh Line Count Summary                          
+
+Language          Files       Code    Comment  Comment %      Blank      Total
+----------------  -----  ---------  ---------  ---------  ---------  ---------
+haskell               9       1330       1030      43.6%        421       2781
+----------------  -----  ---------  ---------  ---------  ---------  ---------
+Total                 9       1330       1030      43.6%        421       2781
+
+Building
+
+cabal configure --enable-benchmarks
+Resolving dependencies...
+Configuring binary-0.7.6.1...
+Warning: This package indirectly depends on multiple versions of the same
+package. This is highly likely to cause a compile failure.
+package zlib-0.5.4.1 requires bytestring-0.10.0.2
+package vector-algorithms-0.7 requires bytestring-0.10.6.0
+package unix-2.7.1.0 requires bytestring-0.10.6.0
+package text-1.2.1.1 requires bytestring-0.10.6.0
+package tar-0.4.2.1 requires bytestring-0.10.6.0
+package scientific-0.3.3.8 requires bytestring-0.10.6.0
+package parsec-3.1.9 requires bytestring-0.10.6.0
+package hastache-0.6.1 requires bytestring-0.10.6.0
+package hashable-1.2.3.2 requires bytestring-0.10.6.0
+package criterion-1.1.0.0 requires bytestring-0.10.6.0
+package cereal-0.4.1.1 requires bytestring-0.10.6.0
+package cassava-0.4.2.4 requires bytestring-0.10.6.0
+package bytestring-builder-0.10.6.0.0 requires bytestring-0.10.6.0
+package blaze-builder-0.4.0.1 requires bytestring-0.10.6.0
+package binary-0.7.6.1 requires bytestring-0.10.6.0
+package binary-0.7.4.0 requires bytestring-0.10.6.0
+package attoparsec-0.13.0.0 requires bytestring-0.10.6.0
+package aeson-0.9.0.1 requires bytestring-0.10.6.0
+package Cabal-1.22.4.0 requires bytestring-0.10.6.0
+cabal build
+Building binary-0.7.6.1...
+Preprocessing library binary-0.7.6.1...
+[1 of 9] Compiling Data.Binary.Builder.Base ( src/Data/Binary/Builder/Base.hs, dist/build/Data/Binary/Builder/Base.o )
+
+src/Data/Binary/Builder/Base.hs:193:37: Warning:
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[2 of 9] Compiling Data.Binary.Builder.Internal ( src/Data/Binary/Builder/Internal.hs, dist/build/Data/Binary/Builder/Internal.o )
+[3 of 9] Compiling Data.Binary.Get.Internal ( src/Data/Binary/Get/Internal.hs, dist/build/Data/Binary/Get/Internal.o )
+
+src/Data/Binary/Get/Internal.hs:417:21: Warning:
+    In the use of `B.inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[4 of 9] Compiling Data.Binary.Builder ( src/Data/Binary/Builder.hs, dist/build/Data/Binary/Builder.o )
+[5 of 9] Compiling Data.Binary.Get  ( src/Data/Binary/Get.hs, dist/build/Data/Binary/Get.o )
+[6 of 9] Compiling Data.Binary.Put  ( src/Data/Binary/Put.hs, dist/build/Data/Binary/Put.o )
+[7 of 9] Compiling Data.Binary.Class ( src/Data/Binary/Class.hs, dist/build/Data/Binary/Class.o )
+[8 of 9] Compiling Data.Binary.Generic ( src/Data/Binary/Generic.hs, dist/build/Data/Binary/Generic.o )
+[9 of 9] Compiling Data.Binary      ( src/Data/Binary.hs, dist/build/Data/Binary.o )
+In-place registering binary-0.7.6.1...
+Preprocessing benchmark 'builder' for binary-0.7.6.1...
+[1 of 3] Compiling Data.Binary.Builder.Base ( src/Data/Binary/Builder/Base.hs, dist/build/builder/builder-tmp/Data/Binary/Builder/Base.o )
+
+src/Data/Binary/Builder/Base.hs:193:37: Warning:
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[2 of 3] Compiling Data.Binary.Builder ( src/Data/Binary/Builder.hs, dist/build/builder/builder-tmp/Data/Binary/Builder.o )
+[3 of 3] Compiling Main             ( benchmarks/Builder.hs, dist/build/builder/builder-tmp/Main.o )
+Linking dist/build/builder/builder ...
+Preprocessing benchmark 'generics-bench' for binary-0.7.6.1...
+[ 1 of 11] Compiling Data.Binary.Builder.Base ( src/Data/Binary/Builder/Base.hs, dist/build/generics-bench/generics-bench-tmp/Data/Binary/Builder/Base.o )
+
+src/Data/Binary/Builder/Base.hs:193:37: Warning:
+    In the use of `inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[ 2 of 11] Compiling Data.Binary.Builder ( src/Data/Binary/Builder.hs, dist/build/generics-bench/generics-bench-tmp/Data/Binary/Builder.o )
+[ 3 of 11] Compiling Data.Binary.Get.Internal ( src/Data/Binary/Get/Internal.hs, dist/build/generics-bench/generics-bench-tmp/Data/Binary/Get/Internal.o )
+
+src/Data/Binary/Get/Internal.hs:417:21: Warning:
+    In the use of `B.inlinePerformIO'
+    (imported from Data.ByteString.Internal):
+    Deprecated: "If you think you know what you are doing, use 'unsafePerformIO'. If you are sure you know what you are doing, use 'unsafeDupablePerformIO'. If you enjoy sharing an address space with a malevolent agent of chaos, try 'accursedUnutterablePerformIO'."
+[ 4 of 11] Compiling Data.Binary.Put  ( src/Data/Binary/Put.hs, dist/build/generics-bench/generics-bench-tmp/Data/Binary/Put.o )
+[ 5 of 11] Compiling Data.Binary.Get  ( src/Data/Binary/Get.hs, dist/build/generics-bench/generics-bench-tmp/Data/Binary/Get.o )
+[ 6 of 11] Compiling Data.Binary.Class ( src/Data/Binary/Class.hs, dist/build/generics-bench/generics-bench-tmp/Data/Binary/Class.o )
+[ 7 of 11] Compiling Data.Binary.Generic ( src/Data/Binary/Generic.hs, dist/build/generics-bench/generics-bench-tmp/Data/Binary/Generic.o )
+[ 8 of 11] Compiling Data.Binary      ( src/Data/Binary.hs, dist/build/generics-bench/generics-bench-tmp/Data/Binary.o )
+[ 9 of 11] Compiling GenericsBenchTypes ( benchmarks/GenericsBenchTypes.hs, dist/build/generics-bench/generics-bench-tmp/GenericsBenchTypes.o )
+[10 of 11] Compiling GenericsBenchCache ( benchmarks/GenericsBenchCache.hs, dist/build/generics-bench/generics-bench-tmp/GenericsBenchCache.o )
+
+benchmarks/GenericsBenchCache.hs:26:41: Not in scope: `<$>'
+
+benchmarks/GenericsBenchCache.hs:63:15: Not in scope: `<$>'
+
+benchmarks/GenericsBenchCache.hs:77:81: Not in scope: `<$>'
+
+Failure...
+
+mv 160246b8967de544d39d6218ffe41f7f4d21d28a.log.tmp 160246b8967de544d39d6218ffe41f7f4d21d28a.log.broken
+rm -rf binary-tmp-REV
