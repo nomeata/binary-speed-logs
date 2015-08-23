@@ -63,27 +63,6 @@ Building
 cabal configure --enable-benchmarks
 Resolving dependencies...
 Configuring binary-0.7.6.1...
-Warning: This package indirectly depends on multiple versions of the same
-package. This is highly likely to cause a compile failure.
-package zlib-0.5.4.1 requires bytestring-0.10.0.2
-package vector-algorithms-0.7 requires bytestring-0.10.6.0
-package unix-2.7.1.0 requires bytestring-0.10.6.0
-package text-1.2.1.1 requires bytestring-0.10.6.0
-package tar-0.4.2.1 requires bytestring-0.10.6.0
-package scientific-0.3.3.8 requires bytestring-0.10.6.0
-package parsec-3.1.9 requires bytestring-0.10.6.0
-package hastache-0.6.1 requires bytestring-0.10.6.0
-package hashable-1.2.3.2 requires bytestring-0.10.6.0
-package criterion-1.1.0.0 requires bytestring-0.10.6.0
-package cereal-0.4.1.1 requires bytestring-0.10.6.0
-package cassava-0.4.2.4 requires bytestring-0.10.6.0
-package bytestring-builder-0.10.6.0.0 requires bytestring-0.10.6.0
-package blaze-builder-0.4.0.1 requires bytestring-0.10.6.0
-package binary-0.7.6.1 requires bytestring-0.10.6.0
-package binary-0.7.4.0 requires bytestring-0.10.6.0
-package attoparsec-0.13.0.0 requires bytestring-0.10.6.0
-package aeson-0.9.0.1 requires bytestring-0.10.6.0
-package Cabal-1.22.4.0 requires bytestring-0.10.6.0
 cabal build
 Building binary-0.7.6.1...
 Preprocessing library binary-0.7.6.1...
