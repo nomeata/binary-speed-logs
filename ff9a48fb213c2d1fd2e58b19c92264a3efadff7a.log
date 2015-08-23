@@ -132,203 +132,203 @@ Linking dist/build/bench/bench ...
 Running 3 benchmarks...
 Benchmark builder: RUNNING...
 benchmarking [Word8]
-time                 34.77 μs   (34.75 μs .. 34.79 μs)
+time                 35.11 μs   (35.09 μs .. 35.13 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 34.81 μs   (34.79 μs .. 34.86 μs)
-std dev              102.7 ns   (38.04 ns .. 189.6 ns)
+mean                 35.14 μs   (35.12 μs .. 35.17 μs)
+std dev              73.96 ns   (48.65 ns .. 101.9 ns)
 
 benchmarking bounds/[Word8]
-time                 42.57 μs   (42.54 μs .. 42.62 μs)
+time                 42.73 μs   (42.70 μs .. 42.76 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 42.55 μs   (42.54 μs .. 42.57 μs)
-std dev              40.46 ns   (18.16 ns .. 83.23 ns)
+mean                 42.72 μs   (42.71 μs .. 42.74 μs)
+std dev              42.82 ns   (34.17 ns .. 53.69 ns)
 
 benchmarking small ByteString
-time                 237.6 ns   (237.5 ns .. 237.7 ns)
+time                 331.6 ns   (331.3 ns .. 331.8 ns)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 237.9 ns   (237.7 ns .. 238.0 ns)
-std dev              474.7 ps   (402.9 ps .. 549.1 ps)
+mean                 331.7 ns   (331.5 ns .. 331.9 ns)
+std dev              700.0 ps   (607.5 ps .. 808.7 ps)
 
 benchmarking large ByteString
-time                 237.9 ns   (237.8 ns .. 238.0 ns)
+time                 330.1 ns   (329.9 ns .. 330.3 ns)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 238.1 ns   (238.0 ns .. 238.3 ns)
-std dev              509.3 ps   (379.2 ps .. 803.2 ps)
+mean                 330.6 ns   (330.3 ns .. 331.1 ns)
+std dev              1.178 ns   (642.0 ps .. 1.843 ns)
 
 benchmarking length-prefixed ByteString
-time                 6.776 μs   (6.773 μs .. 6.781 μs)
+time                 6.727 μs   (6.722 μs .. 6.734 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 6.786 μs   (6.781 μs .. 6.793 μs)
-std dev              19.12 ns   (13.34 ns .. 26.26 ns)
+mean                 6.726 μs   (6.724 μs .. 6.730 μs)
+std dev              9.493 ns   (6.123 ns .. 13.24 ns)
 
 benchmarking Host endian/1MB of Word8 in chunks of 16
-time                 363.1 μs   (362.9 μs .. 363.3 μs)
+time                 367.1 μs   (366.7 μs .. 367.4 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 362.8 μs   (362.7 μs .. 363.0 μs)
-std dev              557.0 ns   (424.5 ns .. 776.6 ns)
+mean                 366.7 μs   (366.7 μs .. 366.9 μs)
+std dev              363.8 ns   (250.4 ns .. 520.0 ns)
 
 benchmarking Host endian/1MB of Word16 in chunks of 16
-time                 221.1 μs   (221.0 μs .. 221.2 μs)
+time                 224.7 μs   (224.5 μs .. 224.9 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 221.0 μs   (220.9 μs .. 221.1 μs)
-std dev              284.4 ns   (227.5 ns .. 368.9 ns)
+mean                 224.1 μs   (224.0 μs .. 224.3 μs)
+std dev              579.3 ns   (450.0 ns .. 740.3 ns)
 
 benchmarking Host endian/1MB of Word32 in chunks of 16
-time                 151.6 μs   (151.3 μs .. 151.8 μs)
+time                 154.3 μs   (154.1 μs .. 154.6 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 151.2 μs   (151.1 μs .. 151.3 μs)
-std dev              358.0 ns   (254.4 ns .. 525.2 ns)
+mean                 154.3 μs   (154.3 μs .. 154.5 μs)
+std dev              341.8 ns   (215.7 ns .. 496.9 ns)
 
 benchmarking Host endian/1MB of Word64 in chunks of 16
-time                 94.06 μs   (93.91 μs .. 94.18 μs)
+time                 97.87 μs   (97.75 μs .. 97.95 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 94.01 μs   (93.89 μs .. 94.10 μs)
-std dev              340.9 ns   (267.2 ns .. 414.4 ns)
+mean                 97.48 μs   (97.30 μs .. 97.62 μs)
+std dev              526.4 ns   (481.1 ns .. 574.1 ns)
 
 Benchmark builder: FINISH
 Benchmark get: RUNNING...
 benchmarking brackets 100kb one chunk input
-time                 5.743 ms   (5.740 ms .. 5.746 ms)
+time                 5.957 ms   (5.946 ms .. 5.976 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 5.753 ms   (5.750 ms .. 5.759 ms)
-std dev              12.53 μs   (9.208 μs .. 17.08 μs)
+mean                 5.964 ms   (5.957 ms .. 5.982 ms)
+std dev              27.98 μs   (14.50 μs .. 56.06 μs)
 
 benchmarking brackets 100kb in 100 byte chunks
-time                 5.945 ms   (5.943 ms .. 5.948 ms)
+time                 6.155 ms   (6.152 ms .. 6.157 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 5.947 ms   (5.944 ms .. 5.950 ms)
-std dev              8.600 μs   (6.131 μs .. 13.28 μs)
+mean                 6.156 ms   (6.154 ms .. 6.159 ms)
+std dev              8.318 μs   (5.431 μs .. 13.88 μs)
 
 benchmarking Attoparsec lazy-bs brackets 100kb one chunk
-time                 2.706 ms   (2.705 ms .. 2.707 ms)
+time                 2.683 ms   (2.680 ms .. 2.685 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 2.708 ms   (2.706 ms .. 2.710 ms)
-std dev              5.976 μs   (4.139 μs .. 9.686 μs)
+mean                 2.686 ms   (2.684 ms .. 2.688 ms)
+std dev              6.665 μs   (5.566 μs .. 8.151 μs)
 
 benchmarking Attoparsec lazy-bs brackets 100kb in 100 byte chunks
-time                 2.777 ms   (2.768 ms .. 2.782 ms)
+time                 2.757 ms   (2.755 ms .. 2.759 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 2.778 ms   (2.776 ms .. 2.780 ms)
-std dev              7.178 μs   (5.183 μs .. 12.19 μs)
+mean                 2.753 ms   (2.750 ms .. 2.755 ms)
+std dev              7.629 μs   (5.854 μs .. 10.76 μs)
 
 benchmarking Attoparsec strict-bs brackets 100kb
-time                 2.701 ms   (2.696 ms .. 2.704 ms)
+time                 2.684 ms   (2.682 ms .. 2.686 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 2.704 ms   (2.703 ms .. 2.705 ms)
-std dev              4.072 μs   (3.106 μs .. 5.758 μs)
+mean                 2.681 ms   (2.679 ms .. 2.682 ms)
+std dev              4.787 μs   (4.096 μs .. 5.699 μs)
 
 benchmarking Cereal strict-bs brackets 100kb
-time                 7.686 ms   (7.682 ms .. 7.690 ms)
+time                 7.408 ms   (7.403 ms .. 7.415 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 7.688 ms   (7.683 ms .. 7.694 ms)
-std dev              14.32 μs   (10.08 μs .. 22.37 μs)
+mean                 7.410 ms   (7.406 ms .. 7.413 ms)
+std dev              11.42 μs   (8.676 μs .. 16.65 μs)
 
 benchmarking Binary getStruct4 1MB struct of 4 word8
-time                 24.77 ms   (24.21 ms .. 25.42 ms)
-                     0.996 R²   (0.992 R² .. 0.999 R²)
-mean                 24.42 ms   (23.97 ms .. 24.79 ms)
-std dev              967.5 μs   (735.4 μs .. 1.259 ms)
+time                 24.19 ms   (23.40 ms .. 24.92 ms)
+                     0.997 R²   (0.993 R² .. 0.999 R²)
+mean                 24.17 ms   (23.74 ms .. 24.51 ms)
+std dev              856.3 μs   (637.7 μs .. 1.142 ms)
 
 benchmarking Cereal getStruct4 1MB struct of 4 word8
-time                 36.74 ms   (35.90 ms .. 37.69 ms)
-                     0.998 R²   (0.997 R² .. 0.999 R²)
-mean                 36.67 ms   (36.05 ms .. 37.02 ms)
-std dev              923.3 μs   (605.1 μs .. 1.396 ms)
+time                 36.46 ms   (35.79 ms .. 37.38 ms)
+                     0.998 R²   (0.996 R² .. 0.999 R²)
+mean                 36.97 ms   (36.48 ms .. 37.82 ms)
+std dev              1.242 ms   (749.7 μs .. 2.066 ms)
 
 benchmarking Attoparsec getStruct4 1MB struct of 4 word8
-time                 26.66 ms   (26.02 ms .. 27.34 ms)
-                     0.998 R²   (0.996 R² .. 0.999 R²)
-mean                 26.72 ms   (26.34 ms .. 27.67 ms)
-std dev              1.243 ms   (603.4 μs .. 2.249 ms)
+time                 26.34 ms   (25.83 ms .. 26.93 ms)
+                     0.998 R²   (0.997 R² .. 0.999 R²)
+mean                 26.49 ms   (26.10 ms .. 27.43 ms)
+std dev              1.215 ms   (536.7 μs .. 2.215 ms)
 variance introduced by outliers: 16% (moderately inflated)
 
 benchmarking Binary getWord8 1MB chunk size 1 byte
-time                 1.892 ms   (1.891 ms .. 1.892 ms)
+time                 1.893 ms   (1.892 ms .. 1.893 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 1.892 ms   (1.892 ms .. 1.893 ms)
-std dev              963.5 ns   (756.9 ns .. 1.201 μs)
+mean                 1.893 ms   (1.892 ms .. 1.893 ms)
+std dev              791.6 ns   (654.0 ns .. 1.003 μs)
 
 benchmarking Cereal getWord8 1MB chunk size 1 byte
-time                 13.74 ms   (13.73 ms .. 13.74 ms)
+time                 14.03 ms   (14.03 ms .. 14.03 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 13.75 ms   (13.74 ms .. 13.75 ms)
-std dev              6.327 μs   (4.797 μs .. 8.629 μs)
+mean                 14.03 ms   (14.03 ms .. 14.04 ms)
+std dev              9.105 μs   (3.734 μs .. 17.53 μs)
 
 benchmarking Attoparsec getWord8 1MB chunk size 1 byte
-time                 2.218 ms   (2.206 ms .. 2.228 ms)
-                     1.000 R²   (0.999 R² .. 1.000 R²)
-mean                 2.212 ms   (2.208 ms .. 2.216 ms)
-std dev              13.85 μs   (11.92 μs .. 16.51 μs)
+time                 2.212 ms   (2.207 ms .. 2.216 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 2.215 ms   (2.212 ms .. 2.219 ms)
+std dev              13.39 μs   (10.71 μs .. 18.46 μs)
 
 benchmarking getWord8 1MB chunk size 2 bytes
-time                 1.823 ms   (1.818 ms .. 1.826 ms)
+time                 1.876 ms   (1.875 ms .. 1.876 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 1.825 ms   (1.825 ms .. 1.826 ms)
-std dev              739.9 ns   (617.1 ns .. 917.8 ns)
+mean                 1.875 ms   (1.875 ms .. 1.876 ms)
+std dev              1.362 μs   (946.6 ns .. 2.143 μs)
 
 benchmarking getWord8 1MB chunk size 4 bytes
-time                 5.599 ms   (5.598 ms .. 5.601 ms)
+time                 5.773 ms   (5.771 ms .. 5.774 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 5.597 ms   (5.595 ms .. 5.598 ms)
-std dev              3.581 μs   (2.879 μs .. 4.768 μs)
+mean                 5.773 ms   (5.772 ms .. 5.776 ms)
+std dev              6.566 μs   (3.993 μs .. 10.79 μs)
 
 benchmarking getWord8 1MB chunk size 8 bytes
-time                 7.248 ms   (7.246 ms .. 7.250 ms)
+time                 7.456 ms   (7.454 ms .. 7.459 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 7.255 ms   (7.253 ms .. 7.258 ms)
-std dev              6.846 μs   (4.707 μs .. 10.02 μs)
+mean                 7.457 ms   (7.456 ms .. 7.458 ms)
+std dev              3.711 μs   (2.444 μs .. 5.819 μs)
 
 benchmarking getWord8 1MB chunk size 16 bytes
-time                 10.42 ms   (10.41 ms .. 10.42 ms)
+time                 10.60 ms   (10.59 ms .. 10.60 ms)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 10.42 ms   (10.42 ms .. 10.42 ms)
-std dev              6.623 μs   (4.354 μs .. 11.16 μs)
+mean                 10.60 ms   (10.60 ms .. 10.60 ms)
+std dev              5.122 μs   (3.380 μs .. 7.983 μs)
 
 benchmarking getWord8 1MB chunk size 2 bytes Applicative
-time                 952.3 μs   (950.9 μs .. 953.5 μs)
+time                 953.8 μs   (953.1 μs .. 954.5 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 954.7 μs   (954.1 μs .. 955.4 μs)
-std dev              2.039 μs   (1.604 μs .. 2.598 μs)
+mean                 954.5 μs   (954.0 μs .. 955.1 μs)
+std dev              1.828 μs   (1.507 μs .. 2.255 μs)
 
 benchmarking getWord8 1MB chunk size 4 bytes Applicative
-time                 549.2 μs   (548.7 μs .. 549.8 μs)
+time                 545.7 μs   (545.0 μs .. 546.5 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 549.9 μs   (549.2 μs .. 550.6 μs)
-std dev              2.405 μs   (1.950 μs .. 3.154 μs)
+mean                 545.7 μs   (545.2 μs .. 546.6 μs)
+std dev              2.410 μs   (1.764 μs .. 3.578 μs)
 
 benchmarking getWord8 1MB chunk size 8 bytes Applicative
-time                 440.7 μs   (440.3 μs .. 441.0 μs)
+time                 441.3 μs   (441.1 μs .. 441.5 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 441.1 μs   (441.1 μs .. 441.2 μs)
-std dev              196.4 ns   (106.9 ns .. 351.4 ns)
+mean                 441.2 μs   (441.1 μs .. 441.4 μs)
+std dev              436.8 ns   (319.3 ns .. 612.0 ns)
 
 benchmarking getWord8 1MB chunk size 16 bytes Applicative
-time                 490.7 μs   (490.2 μs .. 491.1 μs)
+time                 491.5 μs   (491.4 μs .. 491.7 μs)
                      1.000 R²   (1.000 R² .. 1.000 R²)
-mean                 491.0 μs   (491.0 μs .. 491.1 μs)
-std dev              117.6 ns   (94.52 ns .. 154.5 ns)
+mean                 491.7 μs   (491.6 μs .. 492.1 μs)
+std dev              729.4 ns   (330.9 ns .. 1.378 μs)
 
 Benchmark get: FINISH
 Benchmark bench: RUNNING...
-1000MB of setup         in 0.284s, at: 3520.9MB/s
+1000MB of setup         in 0.130s, at: 7677.6MB/s
 
 C memory throughput benchmarks:
-1000MB of bytes written in 0.300s, at: 3333.1MB/s
-1000MB of bytes read    in 0.412s, at: 2427.0MB/s
-1000MB of words written in 0.116s, at: 8620.1MB/s
-1000MB of words read    in 0.072s, at: 13888.1MB/s
+1000MB of bytes written in 0.298s, at: 3356.2MB/s
+1000MB of bytes read    in 0.413s, at: 2423.7MB/s
+1000MB of words written in 0.114s, at: 8794.8MB/s
+1000MB of words read    in 0.068s, at: 14709.8MB/s
 
 Haskell memory throughput benchmarks:
-1000MB of bytes written in 0.808s, at: 1237.5MB/s
-1000MB of bytes read    in 0.832s, at: 1201.8MB/s
-1000MB of words written in 0.116s, at: 8620.2MB/s
-1000MB of words read    in 0.108s, at: 9258.7MB/s
+1000MB of bytes written in 0.813s, at: 1229.6MB/s
+1000MB of bytes read    in 0.830s, at: 1204.9MB/s
+1000MB of words written in 0.113s, at: 8838.8MB/s
+1000MB of words read    in 0.107s, at: 9348.4MB/s
 
 Binary (de)serialisation benchmarks:
-100MB of Word8  in chunks of 16 (  Host endian):  247.5 MB/s write,   94.3 MB/s read,   0.4 get/put-ratio
-100MB of Word16 in chunks of 16 (  Host endian):  531.9 MB/s write,  163.4 MB/s read,   0.3 get/put-ratio
-100MB of Word32 in chunks of 16 (  Host endian):  961.5 MB/s write,  352.1 MB/s read,   0.4 get/put-ratio
-100MB of Word64 in chunks of 16 (  Host endian): 1666.6 MB/s write,  862.0 MB/s read,   0.5 get/put-ratio
+100MB of Word8  in chunks of 16 (  Host endian):  259.9 MB/s write,   91.9 MB/s read,   0.4 get/put-ratio
+100MB of Word16 in chunks of 16 (  Host endian):  518.7 MB/s write,  159.8 MB/s read,   0.3 get/put-ratio
+100MB of Word32 in chunks of 16 (  Host endian):  932.3 MB/s write,  344.2 MB/s read,   0.4 get/put-ratio
+100MB of Word64 in chunks of 16 (  Host endian): 1629.6 MB/s write,  855.6 MB/s read,   0.5 get/put-ratio
 Benchmark bench: FINISH
 
 Cleaning up
